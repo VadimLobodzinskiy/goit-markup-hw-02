@@ -1,0 +1,36 @@
+body {background-color: #F5F5F5;
+    color: #212121;
+}
+/* ul {list-style: none;} */
+
+/* для сброса стиля элемента */
+.list {
+        list-style: none;
+    }    
+
+/* основной #212121*/
+/* вторичный #757575*/
+/* белый #FFFFFF*/
+/* синий #2196F3*/
+/* прозрачность rgba(255, 255, 255, 0.6)*/
+
+/* site-nav */
+.site-nav .link-1 {
+  color: #2196F3;  
+}
+
+.site-nav .link-1:hover,
+.site-nav .link-1:focus {
+    color: #212121;
+}
+
+.site-nav .link-2 {
+    color: #212121;
+}
+
+
+/* auth-nav */
+
+/* hero */
+
+/* section */
