@@ -1,15 +1,14 @@
 :root {
   --primary-text-color: #212121;
+  --primary-white-color: #ffffff;
   --title-text-color: #757575;
   --accent-color: #2196f3;
-  --primary-white-color: #ffffff;
+  --background-body-portfolio: #eeeeee;
+  --logo-studio-color: #000000;
+  --background-team: #f5f4fa;
+  --background-hero-footer: #2f303a;
+  --footer-address-color: rgba(255, 255, 255, 0.6);
 }
-
-/* основной #212121*/
-/* вторичный #757575*/
-/* синий #2196F3*/
-/* белый #FFFFFF*/
-/* прозрачность rgba(255, 255, 255, 0.6)*/
 
 /* для сброса стиля элемента */
 .list {
@@ -20,13 +19,14 @@ body {
   background-color: var(--primary-white-color);
   color: var(--primary-text-color);
   font-family: 'Roboto', sans-serif;
+  font-size: 14px;
   letter-spacing: 0.03em;
 }
 
 /* header-logo */
 
 .logo {
-  color: var(--primary-text-color);
+  color: var(--logo-studio-color);
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -51,7 +51,7 @@ body {
 
 .site-nav .link-bright:hover,
 .site-nav .link-bright:focus {
-  color: #212121;
+  color: var(--primary-text-color);
 }
 
 .site-nav .link {
@@ -70,8 +70,9 @@ body {
 }
 
 /* header contacts */
-.contacts-block .contacts-mail {
-  color: var(--primary-text-color);
+
+.contacts-block .contacts {
+  color: var(--title-text-color);
 
   font-weight: 500;
   font-size: 14px;
@@ -80,32 +81,17 @@ body {
   text-decoration: none;
 }
 
-.contacts-block .contacts-mail:hover,
-.contacts-block .contacts-mail:focus {
-  color: var(--accent-color);
-}
-
-.contacts-block .contacts-tel {
-  color: #757575;
-
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-}
-
-.contacts-block .contacts-tel:hover,
-.contacts-block .contacts-tel:focus {
+.contacts-block .contacts:hover,
+.contacts-block .contacts:focus {
   color: var(--accent-color);
 }
 
 /* hero */
 .hero {
-  background: #2f303a;
+  background: var(--background-hero-footer);
 }
 .hero-title {
-  color: #ffffff;
+  color: var(--primary-white-color);
 
   font-weight: 900;
   font-size: 44px;
@@ -118,11 +104,12 @@ body {
   color: var(--primary-white-color);
 
   font-family: inherit;
-  font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
 
+  letter-spacing: 0.06em;
+  cursor: pointer;
   border-width: 0;
   border-radius: 4px;
 }
@@ -134,7 +121,7 @@ body {
 
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.17px;
+  line-height: 1.17;
   text-align: center;
 }
 .features-title {
@@ -148,8 +135,7 @@ body {
   color: var(--title-text-color);
 
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71x;
+  line-height: 1.71;
 }
 
 .team-title {
@@ -170,16 +156,37 @@ body {
   text-align: center;
 }
 
-/* Кнопки в портфоліо */
-.btn {
-  background-color: #f5f4fa;
+.sections-team {
+  background-color: var(--background-team);
+}
+/* Портфоліо */
+.portfolio-items {
   color: var(--primary-text-color);
 
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.portfolio-list {
+  color: var(--title-text-color);
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.88;
+}
+
+/* Кнопки в портфоліо */
+.btn {
+  background-color: var(--background-team);
+  color: var(--primary-text-color);
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.63x;
-
+  line-height: 1.63;
+  letter-spacing: 0.03em;
+  cursor: pointer;
   border-width: 0;
   border-radius: 4px;
 }
@@ -187,18 +194,16 @@ body {
 .btn:hover,
 .btn:focus {
   background-color: var(--accent-color);
-  color: #ffffff;
+  color: var(--primary-white-color);
 }
 
 /* footer */
 .footer {
-  background-color: #2f303a;
+  background-color: var(--background-hero-footer);
 }
 .footer .logo {
-  color: #ffffff;
+  color: var(--primary-white-color);
 }
-
-/* address */
 
 .address {
   font-family: 'Roboto';
@@ -208,7 +213,7 @@ body {
   line-height: 1.71;
 }
 .address-link {
-  color: #ffffff;
+  color: var(--primary-white-color);
   text-decoration: none;
 }
 
@@ -223,4 +228,19 @@ body {
 .footer-contacts:hover,
 .footer-contacts:focus {
   color: var(--accent-color);
+}
+
+/* скрытый заголовок */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
